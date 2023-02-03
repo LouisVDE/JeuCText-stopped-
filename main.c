@@ -1,26 +1,36 @@
-#include <stdio.h>
+#include "game.h"
 
 int main()
 {
+    system("clear");
+    //lieu
+    char lieu[20];
     //perso
     int vie = 3;
-    char name[20];
-    
-    //INVENTAIRE
+    const char NAME[10];
+    //choix
+    int choix = 0;
+        
+    //OBJET
     //combat
-    int sword = 0, shield = 0;
+    int sword;
+    int shield;
 
-    //debut
-    printf("Bienvenue dans NOM A DEFINIR\n");
+    //parametrage
+    /*printf("Bienvenue dans %s.\n", GAME);
     printf("CE JEU NE DISPOSE PAS DE SYSTEME DE SAUVEGARDE !\n");
-    printf("Entre un nom pour ton personnage\n");
-    scanf("%s",name);
-    prt_perso(name,vie);
-    printf("\n");
-    printf("Le but de cette demo est de sortir du village\n");
+    sleep(4);
+    system("clear");
+    printf("Le but de cette demo est de sortir du village.\n");
+    sleep(4);
+    system("clear");*/
+    printf("Entre un nom pour ton personnage : ");
+    scanf("%s",NAME);
     system("clear");
 
-    prt_perso(name,vie);
-    printf("Vous vous trouvez dans le village de NOM A DEFINIR\n");
-    ft_gameover();
+    //Debut du jeu
+    printf("Vous etes chez vous, dans le village d'%s\n", AMARIA);
+    sleep(3);
+    system("clear");
+    lvl_house(NAME, vie, choix);
 }
