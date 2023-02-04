@@ -6,16 +6,19 @@ int main()
     //lieu
     char lieu[20];
     //perso
+    const char NAME[10];
     int max_vie = 3;
     int vie = 3;
-    const char NAME[10];
+    int atk = 5;
+    int def = 5;
+    
     //choix
     int choix = 0;
         
     //OBJET
     //combat
-    int sword;
-    int shield;
+    int sword = 0;
+    int shield = 0;
 
     //parametrage
     printf("Bienvenue dans %s.\n", GAME);
@@ -33,5 +36,5 @@ int main()
     printf("Vous etes chez vous, dans le village d'Amaria\n");
     sleep(3);
     system("clear");
-    lvl_house(NAME, vie, max_vie, choix);
+    lvl_house(NAME, vie, max_vie, choix, atk, def, sword, shield);
 }
