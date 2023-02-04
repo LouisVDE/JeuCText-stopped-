@@ -6,7 +6,7 @@
 #include <unistd.h>
 
 # define GAME "JEU"
-# define AMARIA "Amaria"
+# define AMARIA "Village d'Amaria"
 # define MAISON "Maison"
 
 #endif
