@@ -2,24 +2,23 @@
 
 int main()
 {
+    struct item item;
     system("clear");
     //lieu
     char lieu[20];
     //perso
     const char NAME[1];
-    int max_vie = 3;
-    int vie = 3;
-    int atk = 5;
-    int def = 5;
-    
+    //item
+    item.atk = 0;
+    item.def = 0;
+    item.gold = 10;
+    item.life = 3;
+    item.max_life = 3;
+    item.shield = 0;
+    item.sword = 0;
     //choix
     int choix = 0;
         
-    //OBJET
-    //combat
-    int sword = 0;
-    int shield = 0;
-
     //parametrage
     printf("Bienvenue dans %s.\n", GAME);
     printf("CE JEU NE DISPOSE PAS DE SYSTEME DE SAUVEGARDE !\n");
@@ -36,5 +35,5 @@ int main()
     printf("Vous etes chez vous, dans le village d'Amaria\n");
     sleep(3);
     system("clear");
-    lvl_house(NAME, vie, max_vie, choix, atk, def, sword, shield);
+    lvl_house(NAME, choix, item);
 }
