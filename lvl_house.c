@@ -16,7 +16,10 @@ void lvl_house(const char NAME[10], int vie, int max_vie, int choix, int atk, in
         if (choix == 1)
         {
             system("clear");
-            printf("Vous sortez...");
+            printf("Vous sortez...\n");
+            sleep(2);
+            system("clear");
+            lvl_amaria(NAME, vie, max_vie, choix, atk, def, sword, shield);
         }
         else if (choix == 2)
         {

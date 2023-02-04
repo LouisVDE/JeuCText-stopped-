@@ -6,7 +6,7 @@ int main()
     //lieu
     char lieu[20];
     //perso
-    const char NAME[10];
+    const char NAME[1];
     int max_vie = 3;
     int vie = 3;
     int atk = 5;

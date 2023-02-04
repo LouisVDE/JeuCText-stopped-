@@ -3,9 +3,9 @@
 //PERSO
 int prt_info(char lieu[20], char NAME[10], int vie, int max_vie, int atk, int def)
 {
-    printf("----------------------------------------------------------\n");
-    printf("| LIEU : %s | %s | PV : %d/%d | ATK : %d | DEF : %d |\n", lieu, NAME, vie, max_vie, atk, def);
-    printf("----------------------------------------------------------\n");
+    printf("--------------------------------------------------------------------\n");
+    printf("| LIEU : %s | %s | PV : %d/%d | ATQ : %d | DEF : %d |\n", lieu, NAME, vie, max_vie, atk, def);
+    printf("--------------------------------------------------------------------\n");
 }
 
 //FIN
