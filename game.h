@@ -17,6 +17,7 @@ struct item
     int def;
     int life;
     int max_life;
+    int elder_trigger;
 };
 
 #endif

@@ -2,6 +2,8 @@
 
 void lvl_amaria(const char NAME[10], int choix, struct item item)
 {
+    item.atk = ft_verif_atk(item);
+    item.def = ft_verif_def(item);
     choix = 0;
     system("clear");
     prt_info(AMARIA, NAME, item);
@@ -39,10 +41,28 @@ void lvl_amaria(const char NAME[10], int choix, struct item item)
         choix = ft_choix(choix);
         if (choix == 1)
         {
-            system("clear");
-            printf("Vous rentrez...\n");
-            sleep(2);
-            lvl_elder_house(NAME, choix, item);
+            if (item.shield == 1)
+            {
+                system("clear");
+                printf("Ne perds pas plus de temps %s !\n", NAME);
+                sleep(2);
+                lvl_amaria(NAME, choix, item);
+            }
+            if (item.elder_trigger == 0)
+            {
+                system("clear");
+                printf("C'est ferme\n", NAME);
+                sleep(2);
+                lvl_amaria(NAME, choix, item);
+            }
+            else if (item.elder_trigger == 1)
+            {
+                item.elder_trigger = 0;
+                system("clear");
+                printf("Vous rentrez...\n");
+                sleep(2);
+                lvl_elder_house(NAME, choix, item);
+            }
         }
         else if (choix == 2)
         {
@@ -58,9 +78,10 @@ void lvl_amaria(const char NAME[10], int choix, struct item item)
     else if (choix == 3)
     {
         system("clear");
-        printf("Vous vous dirigez vers la sortie ...\n");
-        system("clear");
-        ft_victory(NAME);
+        printf("Vous sortez ...\n");
+        sleep(2);
+        item.elder_trigger = 1;
+        lvl_nexit(NAME, choix, item);
     }
     else
     {

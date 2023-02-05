@@ -11,20 +11,17 @@ int main()
     //item
     item.atk = 0;
     item.def = 0;
-    item.gold = 10;
     item.life = 3;
     item.max_life = 3;
     item.shield = 0;
     item.sword = 0;
+    item.elder_trigger = 0;
     //choix
     int choix = 0;
         
     //parametrage
     printf("Bienvenue dans %s.\n", GAME);
     printf("CE JEU NE DISPOSE PAS DE SYSTEME DE SAUVEGARDE !\n");
-    sleep(4);
-    system("clear");
-    printf("Le but de cette demo est de sortir du village.\n");
     sleep(4);
     system("clear");
     printf("Entre un nom pour ton personnage : ");

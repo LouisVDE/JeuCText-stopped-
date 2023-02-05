@@ -2,6 +2,7 @@
 void lvl_house(const char NAME[10], int choix, struct item item)
 {
     item.atk = ft_verif_atk(item);
+    item.def = ft_verif_def(item);
     choix = 0;
     system("clear");
     prt_info(MAISON, NAME, item);
