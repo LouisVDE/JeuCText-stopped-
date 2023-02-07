@@ -7,10 +7,10 @@ void lvl_nexit(const char NAME[10], int choix, struct item item)
     system("clear");
     if (item.sword == 1 && item.shield == 1)
     {
-        printf("TU VA TROP VITE PUTAIN JE DOIS CODER LE RESTE ENCULER\n");
+        printf("Hey %s, viens nous aider !\n", NAME);
         sleep(3);
         system("clear");
-        lvl_amaria(NAME, choix, item);
+        nexit_fight(NAME, choix, item);
     }
     else
     {
